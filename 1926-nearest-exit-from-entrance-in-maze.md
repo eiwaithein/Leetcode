@@ -101,11 +101,11 @@ func nearestExit(_ maze: [[Character]], _ entrance: [Int]) -> Int {
 
 #### Time Complexity
 
-* **Time Complexity**: O(m×n)O(m \times n), where mm is the number of rows and nn is the number of columns. This complexity arises as we might visit each cell in the maze once.
+* **Time Complexity**: O(m×n), where m is the number of rows and n is the number of columns. This complexity arises as we might visit each cell in the maze once.
 
 #### Space Complexity
 
-* **Space Complexity**: O(m×n)O(m \times n) due to the additional space used by the queue to store the positions and distances during the BFS traversal.
+* **Space Complexity**: O(m×n) due to the additional space used by the queue to store the positions and distances during the BFS traversal.
 
 #### Summary Bullet Points
 
