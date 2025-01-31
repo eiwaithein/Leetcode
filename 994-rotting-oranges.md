@@ -1,4 +1,4 @@
-# 994. Rotting Oranges
+# 994 - Rotting Oranges
 
 ## Question
 
@@ -11,8 +11,6 @@ You are given an `m x n` `grid` where each cell can have one of three values:
 Every minute, any fresh orange that is **4-directionally adjacent** to a rotten orange becomes rotten.
 
 Return _the minimum number of minutes that must elapse until no cell has a fresh orange_. If _this is impossible, return_ `-1`.
-
-&#x20;
 
 **Example 1:**
 
@@ -36,16 +34,12 @@ Return _the minimum number of minutes that must elapse until no cell has a fresh
 </strong><strong>Explanation: Since there are already no fresh oranges at minute 0, the answer is just 0.
 </strong></code></pre>
 
-&#x20;
-
 **Constraints:**
 
 * `m == grid.length`
 * `n == grid[i].length`
 * `1 <= m, n <= 10`
 * `grid[i][j]` is `0`, `1`, or `2`.
-
-
 
 ## Solution
 
@@ -114,11 +108,11 @@ func orangesRotting(_ grid: [[Int]]) -> Int {
 
 #### Time Complexity
 
-* **Time Complexity**: O(N×M)O(N \times M), where NN is the number of rows and MM is the number of columns. We visit each cell at most once during the BFS traversal.
+* **Time Complexity**: O(N×M) where N is the number of rows and MM is the number of columns. We visit each cell at most once during the BFS traversal.
 
 #### Space Complexity
 
-* **Space Complexity**: O(N×M)O(N \times M) due to the additional space used by the queue to store the positions of the rotten oranges.
+* **Space Complexity**: O(N×M) due to the additional space used by the queue to store the positions of the rotten oranges.
 
 #### Summary Bullet Points
 
@@ -131,7 +125,7 @@ func orangesRotting(_ grid: [[Int]]) -> Int {
 
 This table captures the state of the grid, the queue, the fresh orange count, and the current minute during each iteration of the BFS traversal.
 
-initial grid value =&#x20;
+initial grid value =
 
 ```
 [[2, 1, 2],
@@ -139,12 +133,12 @@ initial grid value =&#x20;
  [0, 1, 1]]
 ```
 
-| Minute | Queue                     | Fresh Oranges | Grid State                                             |
-| ------ | ------------------------- | ------------- | ------------------------------------------------------ |
-| 0      | \[(0, 2), (1, 0)]         | 5             | <p>[[2, 1, 2], </p><p>[2, 1, 1], </p><p>[0, 1, 1]]</p> |
-| 1      | \[(0, 1), (1, 1)]         | 3             | <p>[[2, 2, 2], </p><p>[2, 2, 1], </p><p>[0, 1, 1]]</p> |
-| 2      | \[(0, 1), (1, 2), (2, 1)] | 1             | <p>[[2, 2, 2], </p><p>[2, 2, 2], </p><p>[0, 2, 1]]</p> |
-| 3      | \[(2, 2)]                 | 0             | <p>[[2, 2, 2], </p><p>[2, 2, 2], </p><p>[0, 2, 2]]</p> |
+| Minute | Queue                     | Fresh Oranges | Grid State                                           |
+| ------ | ------------------------- | ------------- | ---------------------------------------------------- |
+| 0      | \[(0, 2), (1, 0)]         | 5             | <p>[[2, 1, 2],</p><p>[2, 1, 1],</p><p>[0, 1, 1]]</p> |
+| 1      | \[(0, 1), (1, 1)]         | 3             | <p>[[2, 2, 2],</p><p>[2, 2, 1],</p><p>[0, 1, 1]]</p> |
+| 2      | \[(0, 1), (1, 2), (2, 1)] | 1             | <p>[[2, 2, 2],</p><p>[2, 2, 2],</p><p>[0, 2, 1]]</p> |
+| 3      | \[(2, 2)]                 | 0             | <p>[[2, 2, 2],</p><p>[2, 2, 2],</p><p>[0, 2, 2]]</p> |
 
 #### Explanation
 
